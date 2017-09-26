@@ -28,7 +28,7 @@ then
         /usr/bin/yum clean all
         /usr/bin/yum yum install -y yum-utils device-mapper-persistent-data lvm2
         /usr/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-        /usr/bin/yum install docker-ce
+        /usr/bin/yum install -y docker-ce
         /bin/systemctl start docker
         /usr/bin/yum install -y git
         /bin/git clone https://github.com/CloudAssessments/fs-photos.git
