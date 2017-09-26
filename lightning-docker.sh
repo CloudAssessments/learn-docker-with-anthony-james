@@ -31,9 +31,6 @@ then
         /usr/bin/yum install -y docker-ce
         /bin/systemctl start docker
         /usr/bin/yum install -y git
-        /bin/git clone https://github.com/CloudAssessments/fs-photos.git
-        cd fs-photos
-        echo -e "\n" >> Dockerfile
-        echo -e  CMD [\"npm\", \"run\", \"prod\"] >> Dockerfile
-       /bin/docker build .
+        /bin/docker docker pull cloudassessmentscom/fs-photos
+        /bin/docker run -d -p 80:3000 cloudassessmentscom/fs-photos:latest
 fi
