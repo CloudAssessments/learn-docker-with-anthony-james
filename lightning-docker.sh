@@ -25,12 +25,12 @@ then
         echo -e "This course is designed for CentOS7 or Red Hat 7, Please use one of those distributions"
 elif is_centos7 || is_rhel7
 then
-        /usr/bin/yum clean all
-        /usr/bin/yum yum install -y yum-utils device-mapper-persistent-data lvm2
-        /usr/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-        /usr/bin/yum install -y docker-ce
-        /bin/systemctl start docker
-        /usr/bin/yum install -y git
-        /bin/docker docker pull cloudassessmentscom/fs-photos
-        /bin/docker run -d -p 80:3000 cloudassessmentscom/fs-photos:latest
+        /usr/bin/sudo /usr/bin/yum clean all
+        /usr/bin/sudo /usr/bin/yum yum install -y yum-utils device-mapper-persistent-data lvm2
+        /usr/bin/sudo /usr/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+        /usr/bin/sudo /usr/bin/yum install -y docker-ce
+        /usr/bin/sudo /bin/systemctl start docker
+        /usr/bin/sudo /usr/bin/yum install -y git
+        /usr/bin/sudo /bin/docker docker pull cloudassessmentscom/fs-photos
+        /usr/bin/sudo /bin/docker run -d -p 80:3000 cloudassessmentscom/fs-photos:latest
 fi
