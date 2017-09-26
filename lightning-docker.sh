@@ -30,7 +30,6 @@ then
         /usr/bin/sudo /usr/bin/yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
         /usr/bin/sudo /usr/bin/yum install -y docker-ce
         /usr/bin/sudo /bin/systemctl start docker
-        /usr/bin/sudo /usr/bin/yum install -y git
         /usr/bin/sudo /bin/docker docker pull cloudassessmentscom/fs-photos
         /usr/bin/sudo /bin/docker run -d -p 80:3000 cloudassessmentscom/fs-photos:latest
 fi
